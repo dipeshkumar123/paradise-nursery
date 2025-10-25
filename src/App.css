@@ -1,0 +1,54 @@
+#root {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2a37;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.app-shell__header {
+  text-align: center;
+  background: linear-gradient(135deg, #c0f0d0 0%, #e3f9e6 100%);
+  padding: 2.5rem 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 16px 40px -24px rgba(14, 54, 38, 0.6);
+}
+
+.app-shell__header h1 {
+  font-size: clamp(2rem, 3vw, 2.875rem);
+  margin-bottom: 0.75rem;
+}
+
+.app-shell__header p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.app-shell__main section {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 24px 56px -32px rgba(15, 23, 42, 0.25);
+}
+
+.app-shell__main h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.app-shell__main ol {
+  padding-left: 1.25rem;
+  line-height: 1.8;
+}
+
+.app-shell__main li + li {
+  margin-top: 0.75rem;
+}
