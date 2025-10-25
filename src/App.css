@@ -3,10 +3,10 @@
   display: flex;
   align-items: center;
   min-height: 100vh;
-  background-image: url('/plants/hero-bg.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #f5fff9;
 }
 
 .landing__overlay {

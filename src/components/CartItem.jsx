@@ -1,8 +1,10 @@
 const CartItem = ({ item, onIncrement, onDecrement, onRemove }) => {
+  const imageSrc = `${import.meta.env.BASE_URL}${item.image}`
+
   return (
     <article className="cart-item">
       <div className="cart-item__media">
-        <img src={item.image} alt={item.name} loading="lazy" />
+        <img src={imageSrc} alt={item.name} loading="lazy" />
       </div>
       <div className="cart-item__info">
         <h3>{item.name}</h3>

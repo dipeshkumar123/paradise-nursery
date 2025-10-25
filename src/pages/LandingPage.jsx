@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
+  const backgroundImage = `${import.meta.env.BASE_URL}plants/hero-bg.svg`
+
   return (
-    <div className="landing">
+    <div className="landing" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="landing__overlay">
         <header className="landing__header">
           <span className="landing__tag">Paradise Nursery</span>

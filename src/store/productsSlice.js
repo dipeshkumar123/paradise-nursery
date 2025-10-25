@@ -8,7 +8,7 @@ const initialState = {
       price: 22,
       category: 'Indoor',
       description: 'Low-light tolerant plant with striking upright leaves.',
-      image: '/plants/snake-plant.svg',
+      image: 'plants/snake-plant.svg',
     },
     {
       id: 'monstera-deliciosa',
@@ -16,7 +16,7 @@ const initialState = {
       price: 35,
       category: 'Indoor',
       description: 'Iconic split-leaf plant that thrives in bright, indirect light.',
-      image: '/plants/monstera.svg',
+  image: 'plants/monstera.svg',
     },
     {
       id: 'pothos-golden',
@@ -24,7 +24,7 @@ const initialState = {
       price: 18,
       category: 'Indoor',
       description: 'Fast-growing trailing plant perfect for beginners.',
-      image: '/plants/pothos.svg',
+  image: 'plants/pothos.svg',
     },
     {
       id: 'aloe-vera',
@@ -32,7 +32,7 @@ const initialState = {
       price: 15,
       category: 'Succulent',
       description: 'Healing succulent that loves bright windowsills.',
-      image: '/plants/aloe.svg',
+  image: 'plants/aloe.svg',
     },
     {
       id: 'jade-plant',
@@ -40,7 +40,7 @@ const initialState = {
       price: 20,
       category: 'Succulent',
       description: 'Lucky succulent with thick, glossy leaves.',
-      image: '/plants/jade.svg',
+  image: 'plants/jade.svg',
     },
     {
       id: 'boston-fern',
@@ -48,7 +48,7 @@ const initialState = {
       price: 24,
       category: 'Hanging',
       description: 'Lush fern that enjoys humidity and indirect light.',
-      image: '/plants/fern.svg',
+  image: 'plants/fern.svg',
     },
   ],
 }

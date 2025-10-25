@@ -1,8 +1,10 @@
 const ProductCard = ({ product, onAddToCart, isInCart }) => {
+  const imageSrc = `${import.meta.env.BASE_URL}${product.image}`
+
   return (
     <article className="product-card">
       <div className="product-card__media">
-        <img src={product.image} alt={product.name} loading="lazy" />
+        <img src={imageSrc} alt={product.name} loading="lazy" />
       </div>
       <div className="product-card__body">
         <h3>{product.name}</h3>
