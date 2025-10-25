@@ -17,3 +17,9 @@
 - [x] Wire "Add to Cart" buttons to Redux and disable when added
 - [x] Display live cart item count indicator
 - [x] Verify build after product listing changes
+
+- [x] Ensure header renders on product listing and cart pages
+- [x] Sync header navigation styling with active routes
+- [x] Surface cart icon with live count in header
+- [x] Add responsive layout polish for header usage across pages
+- [x] Re-run build/lint post-header enhancements

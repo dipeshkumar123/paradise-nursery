@@ -6,18 +6,18 @@ const Header = () => {
   const cartCount = useAppSelector(selectCartCount)
 
   const buildLinkClass = ({ isActive }) =>
-    isActive ? 'app-header__link active' : 'app-header__link'
+    isActive ? 'app-header__link app-header__link--active' : 'app-header__link'
 
   const buildCartClass = ({ isActive }) =>
     isActive ? 'app-header__cart app-header__cart--active' : 'app-header__cart'
 
   return (
     <header className="app-header">
-      <NavLink to="/" className="app-header__brand">
+      <NavLink to="/" end className="app-header__brand">
         Paradise Nursery
       </NavLink>
       <nav className="app-header__nav">
-        <NavLink to="/" className={buildLinkClass}>
+        <NavLink to="/" end className={buildLinkClass}>
           Home
         </NavLink>
         <NavLink to="/products" className={buildLinkClass}>

@@ -1,8 +1,20 @@
+import { Link } from 'react-router-dom'
+import Header from '../components/Header'
+
 const CartPage = () => {
   return (
     <div className="cart cart--placeholder">
-      <h1>Shopping Cart</h1>
-      <p>Cart functionality is coming soon in Step 5.</p>
+      <Header />
+      <main className="cart__main">
+        <h1>Shopping Cart</h1>
+        <p>
+          Cart management arrives in Step 5. For now, keep browsing our plants
+          and add favorites to your wishlist.
+        </p>
+        <Link to="/products" className="cart__cta">
+          Continue Shopping
+        </Link>
+      </main>
     </div>
   )
 }
