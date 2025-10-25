@@ -1,13 +1,14 @@
 # 🌿 Paradise Nursery Shopping App
 
-React + Vite single page application for browsing houseplants, managing a cart, and completing the peer-review assignment criteria. The project ships with Redux Toolkit for state management and a clean UI scaffold that we will expand in later steps.
+React + Vite single page application for browsing houseplants, managing a cart, and completing the peer-review assignment criteria. The project ships with Redux Toolkit for state management and production-ready pages for landing, catalog, and cart experiences.
 
 ## Features
 
-- Vite-powered React application with lightning-fast reloads.
-- Redux Toolkit store configured with cart and product slices.
-- Project shell outlining the landing page and catalog tasks.
-- Opinionated styling baseline tailored for a nursery-themed experience.
+- Landing hero with CTA that routes into the catalog experience.
+- Product catalog grouped by category with six curated plants and Redux-powered cart toggles.
+- Shopping cart page featuring quantity controls, subtotal calculations, and checkout placeholder messaging.
+- Redux Toolkit store configured with reusable selectors and actions for cart and product management.
+- Vite-powered developer experience with ESLint and build scripts.
 
 ## Getting Started
 
@@ -29,9 +30,11 @@ The development server defaults to `http://localhost:5173`.
 
 ## Project Structure
 
-- `src/App.jsx` – entry screen placeholder and upcoming work outline.
-- `src/store/` – Redux Toolkit slices for products and shopping cart, plus the configured store.
-- `public/plants/` – reserved for future product imagery assets.
+- `src/App.jsx` – application router for landing, catalog, and cart pages.
+- `src/pages/` – feature pages (`LandingPage`, `ProductListingPage`, `CartPage`).
+- `src/components/` – reusable UI such as `Header`, `ProductCard`, and `CartItem`.
+- `src/store/` – Redux Toolkit slices (`cartSlice`, `productsSlice`) with hooks and store configuration.
+- `public/plants/` – vector artwork for hero and product imagery.
 
 ## GitHub Repository Checklist (Plan Step 1)
 
@@ -47,8 +50,29 @@ The development server defaults to `http://localhost:5173`.
 	```
 3. Push early, push often—commit at meaningful milestones as you work through the plan.
 
-## Next Steps
+## Testing
 
-- Flesh out the landing page hero with imagery, copy, and CTA.
-- Build the product listing UI grouped by categories.
-- Implement cart interactions and navigation using the configured Redux store.
+Manual test scenarios are catalogued in `docs/testing-checklist.md`. Run through the checklist before submission and execute the commands below:
+
+```bash
+npm run lint
+npm run build
+```
+
+Optional: run `npm run dev` and exercise the flows while observing Redux DevTools.
+
+## Deployment
+
+Pick any static hosting provider compatible with Vite builds:
+
+1. `npm run build`
+2. Deploy the `dist/` folder to Netlify, Vercel, GitHub Pages, or Azure Static Web Apps.
+3. Verify that routing works by refreshing `/products` and `/cart` on the live site (configure rewrite rules if needed).
+
+## Submission Checklist
+
+- [ ] All manual tests from `docs/testing-checklist.md` pass.
+- [ ] `npm run lint` and `npm run build` succeed without warnings.
+- [ ] Live deployment URL captured.
+- [ ] Public GitHub repository URL captured.
+- [ ] Both links submitted to Coursera per the peer-review instructions.

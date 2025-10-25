@@ -24,6 +24,11 @@
 - [x] Add responsive layout polish for header usage across pages
 - [x] Re-run build/lint post-header enhancements
 
+- [x] Run project linting and address findings
+- [x] Document manual testing checklist
+- [x] Update README with testing and deployment instructions
+- [x] Note submission checklist for live/demo links
+
 - [x] Render cart summary with total items and total cost
 - [x] Display cart items list with quantity controls and thumbnails
 - [x] Implement increment, decrement, and delete cart actions
