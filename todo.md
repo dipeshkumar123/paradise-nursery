@@ -23,3 +23,10 @@
 - [x] Surface cart icon with live count in header
 - [x] Add responsive layout polish for header usage across pages
 - [x] Re-run build/lint post-header enhancements
+
+- [x] Render cart summary with total items and total cost
+- [x] Display cart items list with quantity controls and thumbnails
+- [x] Implement increment, decrement, and delete cart actions
+- [x] Add checkout button with "Coming Soon" feedback
+- [x] Ensure continue shopping button navigates correctly
+- [x] Run build after cart functionality updates
