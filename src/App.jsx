@@ -1,26 +1,18 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import LandingPage from './pages/LandingPage'
+import ProductListingPage from './pages/ProductListingPage'
+import CartPage from './pages/CartPage'
 import './App.css'
 
-function App() {
+const App = () => {
   return (
-    <div className="app-shell">
-      <header className="app-shell__header">
-        <h1>Paradise Nursery Shopping App</h1>
-        <p>
-          Redux Toolkit is configured. Start building the landing and product
-          experiences next.
-        </p>
-      </header>
-      <main className="app-shell__main">
-        <section>
-          <h2>Next Steps</h2>
-          <ol>
-            <li>Build the landing page with hero content.</li>
-            <li>Display products grouped by category.</li>
-            <li>Hook up cart interactions using the Redux store.</li>
-          </ol>
-        </section>
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/products" element={<ProductListingPage />} />
+        <Route path="/cart" element={<CartPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
