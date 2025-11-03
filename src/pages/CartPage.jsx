@@ -53,19 +53,23 @@ const CartPage = () => {
     <div className="cart">
       <Header />
       <main className="cart__main" aria-live="polite">
-        <section className="cart-summary">
-          <div className="cart-summary__totals">
-            <h1>Shopping Cart</h1>
+        <section className="cart-hero">
+          <div className="cart-hero__summary">
+            <span className="cart-pill">Step 1 of 3</span>
+            <h1>Review your plant bundle</h1>
             <p>{summaryLabel}</p>
           </div>
-          <div className="cart-summary__amount">
-            <span>Total</span>
-            <strong>{formattedTotal}</strong>
+          <div className="cart-hero__totals">
+            <div>
+              <span>Current total</span>
+              <strong>{formattedTotal}</strong>
+            </div>
+            <p>Free shipping over $75 · 30-day happiness guarantee</p>
           </div>
         </section>
 
         {hasItems ? (
-          <>
+          <div className="cart-layout">
             <section className="cart-items">
               {cartItems.map((item) => (
                 <CartItem
@@ -78,17 +82,53 @@ const CartPage = () => {
               ))}
             </section>
 
-            <section className="cart-actions">
-              <button type="button" className="cart-actions__checkout" onClick={handleCheckout}>
-                Checkout
-              </button>
-              <Link to="/products" className="cart-actions__continue">
-                Continue Shopping
-              </Link>
-            </section>
+            <aside className="cart-sidebar">
+              <section className="cart-steps" aria-label="Checkout steps">
+                <h2>Checkout timeline</h2>
+                <ol>
+                  <li>
+                    <span>1</span>
+                    <div>
+                      <strong>Review bundle</strong>
+                      <p>Confirm plants, quantities, and add notes.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span>2</span>
+                    <div>
+                      <strong>Delivery details</strong>
+                      <p>Choose delivery window and add gift options.</p>
+                    </div>
+                  </li>
+                  <li>
+                    <span>3</span>
+                    <div>
+                      <strong>Secure payment</strong>
+                      <p>Checkout via card, UPI, or cash on delivery.</p>
+                    </div>
+                  </li>
+                </ol>
+              </section>
 
-            {checkoutMessage && <p className="cart-actions__message">{checkoutMessage}</p>}
-          </>
+              <section className="cart-perks" aria-label="Order perks">
+                <h2>Included with every order</h2>
+                <ul>
+                  <li>
+                    <span>📦</span>
+                    Sustainable, soil-secure packaging
+                  </li>
+                  <li>
+                    <span>📘</span>
+                    Care guide printed & emailed for quick reference
+                  </li>
+                  <li>
+                    <span>💬</span>
+                    Priority chat with horticulture specialists
+                  </li>
+                </ul>
+              </section>
+            </aside>
+          </div>
         ) : (
           <section className="cart-empty">
             <p>
@@ -98,6 +138,18 @@ const CartPage = () => {
             <Link to="/products" className="cart__cta">
               Explore Plants
             </Link>
+          </section>
+        )}
+
+        {hasItems && (
+          <section className="cart-actions">
+            <button type="button" className="cart-actions__checkout" onClick={handleCheckout}>
+              Proceed to delivery
+            </button>
+            <Link to="/products" className="cart-actions__continue">
+              Continue shopping
+            </Link>
+            {checkoutMessage && <p className="cart-actions__message">{checkoutMessage}</p>}
           </section>
         )}
       </main>
